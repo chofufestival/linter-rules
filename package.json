@@ -1,4 +1,83 @@
 {
-  "name": "linter-rules",
-  "packageManager": "yarn@4.0.0-rc.50"
+  "name": "@chofufestival/linter-rules",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chofufestival/linter-rules.git"
+  },
+  "packageManager": "yarn@4.0.2",
+  "exports": {
+    "./commitlint": {
+      "types": "./commitlint/index.d.ts",
+      "import": "./commitlint/index.mjs"
+    },
+    "./eslint": {
+      "types": "./eslint/index.d.ts",
+      "import": "./eslint/index.mjs"
+    },
+    "./eslint/withNext": {
+      "types": "./eslint/index.d.ts",
+      "import": "./eslint/withNext.mjs"
+    },
+    "./prettier": {
+      "types": "./prettier/index.d.ts",
+      "import": "./prettier/index.mjs"
+    },
+    "./stylelint": {
+      "types": "./stylelint/index.d.ts",
+      "import": "./stylelint/index.mjs"
+    }
+  },
+  "scripts": {
+    "lint": "cross-env ESLINT_USE_FLAT_CONFIG=true eslint -c eslint.config.mjs --max-warnings 0",
+    "format": "prettier --check --ignore-path .gitignore"
+  },
+  "lint-staged": {
+    "./**/*.{js,ts}": [
+      "yarn format",
+      "yarn lint"
+    ]
+  },
+  "dependencies": {
+    "@commitlint/config-conventional": "^18.4.4",
+    "@eslint/eslintrc": "^3.0.0",
+    "@eslint/js": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "eslint-config-flat-gitignore": "^0.1.2",
+    "eslint-config-next": "^14.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "globals": "^13.24.0",
+    "pkg-dir": "^8.0.0",
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recess-order": "^4.4.0",
+    "stylelint-config-sass-guidelines": "^11.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
+    "stylelint-value-no-unknown-custom-properties": "^6.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/types": "^18.4.4",
+    "@types/eslint": "^8.56.2",
+    "@types/node": "^20.11.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.2",
+    "stylelint": "^16.1.0",
+    "typescript": "^5.3.3"
+  },
+  "volta": {
+    "node": "20.11.0",
+    "yarn": "4.0.2"
+  },
+  "peerDependencies": {
+    "@commitlint/cli": "^18",
+    "eslint": "^8",
+    "prettier": "^3",
+    "stylelint": "^16"
+  }
 }
