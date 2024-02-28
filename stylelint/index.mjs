@@ -3,7 +3,8 @@ export default {
   extends: [
     "stylelint-config-standard-scss",
     "stylelint-config-sass-guidelines",
-    "stylelint-config-recess-order"
+    "stylelint-config-recess-order",
+    "@stylistic/stylelint-config"
   ],
   plugins: [
     // "stylelint-a11y",
