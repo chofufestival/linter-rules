@@ -7,21 +7,17 @@ export default {
     "@stylistic/stylelint-config"
   ],
   plugins: [
-    // "stylelint-a11y",
+    "@double-great/stylelint-a11y",
     "stylelint-declaration-block-no-ignored-properties",
     "stylelint-value-no-unknown-custom-properties"
   ],
   rules: {
-    "declaration-property-value-no-unknown": true,
-    "color-named": "never",
-    /*
-    Disabled due to compatibility:
     "a11y/font-size-is-readable": true,
     "a11y/no-obsolete-attribute": true,
     "a11y/no-obsolete-element": true,
     "a11y/no-outline-none": true,
     "a11y/selector-pseudo-class-focus": true,
-    */
+    "color-named": "never",
     "plugin/declaration-block-no-ignored-properties": true,
     "csstools/value-no-unknown-custom-properties": true
   },

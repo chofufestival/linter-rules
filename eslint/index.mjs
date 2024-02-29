@@ -1,4 +1,5 @@
 import js from "@eslint/js";
+import stylisticMigrate from "@stylistic/eslint-plugin-migrate";
 import gitignore from "eslint-config-flat-gitignore";
 import prettierConfig from "eslint-config-prettier";
 
@@ -13,5 +14,8 @@ export default [
   baseConfig,
   importConfigs,
   ...tsConfigs,
-  prettierConfig
+  prettierConfig,
+  {
+    plugins: { "@stylistic/migrate": stylisticMigrate }
+  }
 ];
