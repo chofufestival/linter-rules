@@ -24,7 +24,6 @@ export default {
     "eqeqeq": ["error", "always"],
     "no-console": "warn",
     "no-undefined": "error",
-    "no-var": "error",
-    "require-await": "off"
+    "no-var": "error"
   }
 };

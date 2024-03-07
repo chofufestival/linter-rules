@@ -1,0 +1,23 @@
+ls:
+  .jpg: kebab-case
+  .png: kebab-case
+  .svg: kebab-case
+  .webp: kebab-case
+
+  src:
+    .dir: kebab-case
+    .js: kebab-case
+    .ts: kebab-case
+    .tsx: kebab-case
+    .mdx: kebab-case
+    .module.scss: regex:style
+
+  src/**/components:
+    .dir: kebab-case
+    .tsx: regex:index | PascalCase
+    .mdx: regex:index | PascalCase
+    .module.scss: regex:style | PascalCase
+
+ignore:
+  - .git
+  - node_modules

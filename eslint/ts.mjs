@@ -3,10 +3,6 @@
 
 import tseslint from "typescript-eslint";
 
-/*
-...compat.extends("plugin:@typescript-eslint/recommended"),
-  ...compat.extends("plugin:@typescript-eslint/stylistic"),
-  */
 export default tseslint.config(
   {
     extends: [...tseslint.configs.recommended, ...tseslint.configs.stylistic],
@@ -17,23 +13,27 @@ export default tseslint.config(
     },
     rules: {
       "@typescript-eslint/no-non-null-assertion": "warn",
-      "@typescript-eslint/no-duplicate-enum-values": "off",
-      "@typescript-eslint/no-unsafe-declaration-merging": "off",
-      "@typescript-eslint/array-type": "off",
-      "@typescript-eslint/ban-tslint-comment": "off",
-      "@typescript-eslint/class-literal-property-style": "off",
-      "@typescript-eslint/consistent-generic-constructors": "off",
-      "@typescript-eslint/consistent-indexed-object-style": "off",
-      "@typescript-eslint/consistent-type-assertions": "off",
-      "@typescript-eslint/consistent-type-definitions": "off",
-      "@typescript-eslint/no-confusing-non-null-assertion": "off",
-      "@typescript-eslint/prefer-for-of": "off",
-      "@typescript-eslint/prefer-function-type": "off",
+      "@typescript-eslint/no-duplicate-enum-values": "error",
+      "@typescript-eslint/no-unsafe-declaration-merging": "error",
+      "@typescript-eslint/array-type": ["error", { default: "array-simple" }],
+      "@typescript-eslint/class-literal-property-style": "error",
+      "@typescript-eslint/consistent-generic-constructors": "error",
+      "@typescript-eslint/consistent-indexed-object-style": "error",
+      "@typescript-eslint/consistent-type-assertions": "off", // Disabled due to bug of typescript-eslint. 2024.03.08
+      "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+      "@typescript-eslint/no-confusing-non-null-assertion": "error",
+      "@typescript-eslint/prefer-for-of": "error",
+      "@typescript-eslint/prefer-function-type": "error",
+      "@typescript-eslint/consistent-type-imports": "error",
       "@typescript-eslint/require-await": "error"
     }
   },
   {
     files: ["**/*.js", "**/*.cjs", "**/*.mjs"],
     extends: [tseslint.configs.disableTypeChecked]
+  },
+  {
+    files: ["**/*.ts", "**/*.tsx", "**/*.d.cts", "**/*.mts"],
+    rules: { "no-undef": "off" }
   }
 );

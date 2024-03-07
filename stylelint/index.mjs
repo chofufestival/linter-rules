@@ -18,6 +18,7 @@ export default {
     "a11y/no-outline-none": true,
     "a11y/selector-pseudo-class-focus": true,
     "color-named": "never",
+    "declaration-property-value-no-unknown": true,
     "plugin/declaration-block-no-ignored-properties": true,
     "csstools/value-no-unknown-custom-properties": true
   },
