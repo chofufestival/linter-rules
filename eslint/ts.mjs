@@ -1,6 +1,3 @@
-/* eslint @stylistic/migrate/migrate-js: "error" */
-/* eslint @stylistic/migrate/migrate-ts: "error" */
-
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
@@ -12,6 +9,34 @@ export default tseslint.config(
       }
     },
     rules: {
+      "camelcase": "off",
+      "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          selector: "default",
+          format: ["camelCase"]
+        },
+        {
+          selector: "variable",
+          types: ["boolean"],
+          format: ["PascalCase"],
+          prefix: ["is", "should", "has", "can", "did", "will"]
+        },
+        {
+          selector: "variable",
+          types: ["string", "number"],
+          format: ["camelCase", "UPPER_CASE"]
+        },
+        {
+          selector: "parameter",
+          format: ["camelCase"],
+          leadingUnderscore: "allow"
+        },
+        {
+          selector: "typeLike",
+          format: ["PascalCase"]
+        }
+      ],
       "@typescript-eslint/no-non-null-assertion": "warn",
       "@typescript-eslint/no-duplicate-enum-values": "error",
       "@typescript-eslint/no-unsafe-declaration-merging": "error",
