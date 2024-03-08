@@ -28,6 +28,18 @@ export default tseslint.config(
           format: ["camelCase", "UPPER_CASE"]
         },
         {
+          selector: "import",
+          format: ["camelCase", "PascalCase"]
+        },
+        {
+          selector: "function",
+          format: ["camelCase", "PascalCase"]
+        },
+        {
+          selector: "property",
+          format: null
+        },
+        {
           selector: "parameter",
           format: ["camelCase"],
           leadingUnderscore: "allow"
