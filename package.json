@@ -1,6 +1,6 @@
 {
   "name": "@chofufestival/linter-rules",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/chofufestival/linter-rules.git"
@@ -26,6 +26,10 @@
     "./stylelint": {
       "types": "./stylelint/index.d.ts",
       "import": "./stylelint/index.mjs"
+    },
+    "./stylelint/withVue": {
+      "types": "./stylelint/index.d.ts",
+      "import": "./stylelint/withVue.mjs"
     }
   },
   "scripts": {
@@ -51,9 +55,12 @@
     "eslint-plugin-simple-import-sort": "^12.1.0",
     "globals": "^15.1.0",
     "pkg-dir": "^8.0.0",
+    "postcss-html": "^1.6.0",
     "stylelint-a11y": "^1.2.3",
+    "stylelint-config-html": "^1.1.0",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recess-order": "^5.0.1",
+    "stylelint-config-recommended-vue": "^1.5.0",
     "stylelint-config-sass-guidelines": "^11.1.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
