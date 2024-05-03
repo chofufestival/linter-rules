@@ -1,6 +1,3 @@
-/* eslint @stylistic/migrate/migrate-js: "error" */
-/* eslint @stylistic/migrate/migrate-ts: "error" */
-
 import stylistic from "@stylistic/eslint-plugin";
 import globals from "globals";
 
