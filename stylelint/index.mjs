@@ -1,8 +1,7 @@
 /** @type {import('stylelint').Config} */
 export default {
   extends: [
-    "stylelint-config-standard-scss",
-    "stylelint-config-sass-guidelines",
+    "stylelint-config-standard",
     "stylelint-config-recess-order",
     "@stylistic/stylelint-config"
   ],
@@ -17,10 +16,23 @@ export default {
     "a11y/no-obsolete-element": true,
     "a11y/no-outline-none": true,
     "a11y/selector-pseudo-class-focus": true,
+    "at-rule-no-unknown": [
+      true,
+      {
+        ignoreAtRules: ["tailwind", "layer", "apply"]
+      }
+    ],
     "color-named": "never",
+    "csstools/value-no-unknown-custom-properties": true,
     "declaration-property-value-no-unknown": true,
-    "plugin/declaration-block-no-ignored-properties": true,
-    "csstools/value-no-unknown-custom-properties": true
+    "function-no-unknown": [
+      true,
+      {
+        ignoreFunctions: ["theme", "screen"]
+      }
+    ],
+
+    "plugin/declaration-block-no-ignored-properties": true
   },
   ignoreFiles: ["**/node_modules/**"]
 };
