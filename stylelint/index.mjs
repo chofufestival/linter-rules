@@ -19,19 +19,19 @@ export default {
     "at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": ["tailwind", "layer", "apply"]
+        ignoreAtRules: ["tailwind", "layer", "apply"]
       }
     ],
     "color-named": "never",
-    "declaration-property-value-no-unknown": true,
-    "plugin/declaration-block-no-ignored-properties": true,
     "csstools/value-no-unknown-custom-properties": true,
     "function-no-unknown": [
       true,
       {
-        "ignoreFunctions": ["theme", "screen"]
+        ignoreFunctions: ["theme", "screen"]
       }
-    ]
+    ],
+    "declaration-property-value-no-unknown": true,
+    "plugin/declaration-block-no-ignored-properties": true
   },
   ignoreFiles: ["**/node_modules/**"]
 };
