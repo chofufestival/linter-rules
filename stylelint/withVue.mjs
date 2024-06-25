@@ -19,12 +19,12 @@ export default {
     "a11y/no-obsolete-element": true,
     "a11y/no-outline-none": true,
     "a11y/selector-pseudo-class-focus": true,
-    "at-rule-no-unknown": false,
-    "scss/at-rule-no-unknown": false,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": null,
     "color-named": "never",
     "csstools/value-no-unknown-custom-properties": true,
     "declaration-property-value-no-unknown": true,
-    "function-no-unknown": false,
+    "function-no-unknown": null,
     "plugin/declaration-block-no-ignored-properties": true
   },
   ignoreFiles: ["**/node_modules/**"]
