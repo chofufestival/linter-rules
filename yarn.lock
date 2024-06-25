@@ -86,7 +86,7 @@ __metadata:
     typescript-eslint: "npm:^7.14.1"
   peerDependencies:
     "@commitlint/cli": ">=19"
-    eslint: ">=9"
+    eslint: ^8
     prettier: ">=3"
     stylelint: ">=16"
   languageName: unknown

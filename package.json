@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/chofufestival/linter-rules.git"
   },
-  "packageManager": "yarn@4.1.1",
+  "packageManager": "yarn@4.3.1",
   "exports": {
     "./commitlint": {
       "types": "./commitlint/index.d.ts",
@@ -83,7 +83,7 @@
   },
   "peerDependencies": {
     "@commitlint/cli": ">=19",
-    "eslint": ">=9",
+    "eslint": "^8",
     "prettier": ">=3",
     "stylelint": ">=16"
   }
