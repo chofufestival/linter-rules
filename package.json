@@ -62,7 +62,7 @@
     "stylelint-config-standard": "^36.0.1",
     "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
     "stylelint-value-no-unknown-custom-properties": "^6.0.1",
-    "typescript-eslint": "^7.13.1"
+    "typescript-eslint": "^7.14.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
