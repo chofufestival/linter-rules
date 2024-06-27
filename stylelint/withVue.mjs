@@ -25,6 +25,7 @@ export default {
     "csstools/value-no-unknown-custom-properties": true,
     "declaration-property-value-no-unknown": true,
     "function-no-unknown": null,
+    "media-query-no-invalid": null,
     "plugin/declaration-block-no-ignored-properties": true
   },
   ignoreFiles: ["**/node_modules/**"]
