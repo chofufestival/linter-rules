@@ -24,7 +24,9 @@ export default {
     "declaration-property-value-no-unknown": true,
     "function-no-unknown": null,
     "media-query-no-invalid": null,
-    "plugin/declaration-block-no-ignored-properties": true
+    "plugin/declaration-block-no-ignored-properties": true,
+    "max-nesting-depth": 3,
+    "selector-max-compound-selectors": null
   },
   ignoreFiles: ["**/node_modules/**"]
 };
