@@ -26,7 +26,8 @@ export default {
     "media-query-no-invalid": null,
     "plugin/declaration-block-no-ignored-properties": true,
     "max-nesting-depth": 3,
-    "selector-max-compound-selectors": null
+    "selector-max-compound-selectors": null,
+    "no-descending-specificity": null
   },
   ignoreFiles: ["**/node_modules/**"]
 };
