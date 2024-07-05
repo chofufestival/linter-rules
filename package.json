@@ -37,7 +37,7 @@
     "format": "prettier --check --ignore-path .gitignore"
   },
   "lint-staged": {
-    "./**/*.{js,ts}": [
+    "*.{js,ts}": [
       "yarn format",
       "yarn lint"
     ]
